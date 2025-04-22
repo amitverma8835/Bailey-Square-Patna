@@ -1,0 +1,105 @@
+.wayfinder-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.wayfinder-navbar {
+  flex-shrink: 0;
+  height: 60px;
+}
+
+.wayfinder-footer {
+  flex-shrink: 0;
+  height: 60px;
+}
+
+.wayfinder-main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  padding: 10px;
+  
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  min-width: 0;
+  
+}
+
+.image-container img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  height: auto;
+}
+
+.legend-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.legend-container h1 {
+  font-size: clamp(16px, 2vw, 24px);
+  margin-bottom: 10px;
+  color: #af1781;
+}
+
+.legend-container h2 {
+  font-size: clamp(14px, 1.8vw, 20px);
+  margin-bottom: 10px;
+  color: #dac8c8;
+}
+
+.legend-items {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 100%;
+  gap: 8px;
+  overflow: hidden;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  font-size: clamp(12px, 1.5vw, 13px);
+}
+
+.legend-number {
+  font-weight: bold;
+  margin-right: 5px;
+  min-width: 20px;
+}
+
+.legend-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .wayfinder-main {
+    flex-direction: column;
+  }
+
+  .image-container {
+    max-height: 50%;
+  }
+
+  .legend-items {
+    max-height: 50%;
+  }
+}

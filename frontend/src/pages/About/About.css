@@ -1,0 +1,91 @@
+.about-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+
+  overflow: hidden;
+}
+
+.about-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #b48835;
+  margin-bottom: 1rem;
+  animation: fade-in 1s ease-in;
+}
+
+.about-section h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #b48835;
+  margin-bottom: 1.2rem;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #fafafa;
+  margin-bottom: 2rem;
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    padding: 15px;
+  }
+
+  .about-content h1 {
+    font-size: 2rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-content {
+    padding: 10px;
+  }
+
+  .about-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .about-section p {
+    font-size: 0.9rem;
+  }
+}
