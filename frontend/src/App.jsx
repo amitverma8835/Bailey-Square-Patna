@@ -9,6 +9,7 @@ import WayFinder from './pages/WayFinder/WayFinder'
 import Gallery from './pages/Gallery/Gallery';
 import Specs from './pages/Specss/Specs';
 import Outlets from './pages/Outlets/Outlets';
+import Page from './pages/Outlets-Pages/Page'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/gallery" element={<Gallery/>} />
         <Route path="/specs" element={<Specs/>} />
         <Route path="/outlets" element={<Outlets/>} />
+        <Route path="/page/:floor" element={<Page />} />
       </Routes>
     </Router>
   );

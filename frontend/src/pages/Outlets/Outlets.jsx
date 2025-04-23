@@ -1,15 +1,14 @@
-import React from 'react'
-import BackIcon from '../../assets/back.png'
-import Logo from '../../assets/bailey-logo1.png'
-import { useNavigate } from 'react-router-dom'
-import './Outlets.css'
+import React from 'react';
+import BackIcon from '../../assets/back.png';
+import Logo from '../../assets/bailey-logo1.png';
+import { useNavigate } from 'react-router-dom';
+import './Outlets.css';
 
 function Outlets() {
   const navigate = useNavigate(); 
 
   const handleButtonClick = (floor) => {
-    console.log(`Clicked: ${floor}`);
-    navigate(`/${floor.replace(/\s+/g, '-').toLowerCase()}`); 
+    navigate(`/page/${floor.replace(/\s+/g, '-').toLowerCase()}`);
   };
 
   const floors = [
@@ -23,7 +22,7 @@ function Outlets() {
 
   return (
     <div className="outlets-container">
-      <img src={BackIcon} alt="Back" className="back-icon" onClick={() => handleButtonClick('second')} />
+      <img src={BackIcon} alt="Back" className="back-icon" onClick={() => navigate('/')} />
       <img src={Logo} alt="Bailey Logo" className="outlets-logo" />
       <div className="buttons-container">
         {floors.map((floor) => (
@@ -37,7 +36,7 @@ function Outlets() {
         ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default Outlets
+export default Outlets;
